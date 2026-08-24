@@ -13,11 +13,13 @@ layout: full
       <div class="bul"><span><b>Термінове — банером одразу під карткою</b>: відключення води бачить кожен, хто відкрив додаток.</span></div>
       <div class="bul"><span>Коли боргу немає — <b>«Все сплачено»</b> і дата наступного нарахування. Панель оплати зникає.</span></div>
     </div>
-    <div class="quote" style="margin-top:16px">Мешканець бачить свій стан без дзвінка в правління.</div>
+    <div class="quote" style="margin-top:16px"><span>Мешканець бачить свій стан без дзвінка в правління.<br><span style="font-weight:400;color:var(--mo-text-secondary,#6B6A80)">Кадри: борг · сплачено · переплата · перший місяць без оголошень.</span></span></div>
   </div>
-  <div style="flex:none;display:flex;gap:40px;align-items:center">
-    <img src="/screens/home-1a.png" class="phone" style="--pw:320px">
-    <img src="/screens/home-1c.png" class="phone" style="--pw:270px;box-shadow:0 24px 48px rgba(23,22,43,.18)">
+  <div style="flex:none;display:grid;grid-template-columns:repeat(2,210px);gap:20px;align-content:center">
+    <img src="/screens/home-1a.png" class="phone" style="--pw:210px;box-shadow:0 20px 44px rgba(23,22,43,.2)">
+    <img src="/screens/home-1c.png" class="phone" style="--pw:210px;box-shadow:0 20px 44px rgba(23,22,43,.2)">
+    <img src="/screens/home-1e.png" class="phone" style="--pw:210px;box-shadow:0 20px 44px rgba(23,22,43,.2)">
+    <img src="/screens/home-1f.png" class="phone" style="--pw:210px;box-shadow:0 20px 44px rgba(23,22,43,.2)">
   </div>
 </div>
 

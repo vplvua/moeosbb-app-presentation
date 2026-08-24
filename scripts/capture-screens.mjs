@@ -16,7 +16,7 @@ mkdirSync(OUT, { recursive: true });
 
 // canvas file → screen ids (id="1a" тощо в *.dc.html)
 const SHOTS = {
-  'home': ['1a', '1b', '1c'],
+  'home': ['1a', '1b', '1c', '1e', '1f'],
   'feeds': ['1a', '1c'],
   'services': ['1a', '1c'],
   'chats': ['1a', '1b', '1d', '1e'],
