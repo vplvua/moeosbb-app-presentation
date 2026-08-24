@@ -9,7 +9,7 @@ A [Slidev](https://sli.dev/) presentation for the «Моє ОСББ» mobile app
 ## Commands
 
 - `npm run dev` — dev server with live reload at http://localhost:3030
-- `npm run build` — build the static SPA into `dist/` (deployed to Netlify/Vercel per `netlify.toml` / `vercel.json`)
+- `npm run build` — build the static SPA into `dist/` (deploy configs: `netlify.toml` / `vercel.json`; GitHub Pages via `.github/workflows/deploy.yml`, which builds with `--base /<repo-name>/` — Slidev rewrites absolute `/screens/...` asset URLs for the base automatically)
 - `npm run export` — export to PDF/PNG/PPTX (uses `playwright-chromium`)
 
 There are no tests or linters.
@@ -20,6 +20,7 @@ There are no tests or linters.
 - `pages/NN-name.md` — one file per slide (16 total, numbered in deck order). Each carries its own frontmatter (`layout: full`, `class: mo` for light slides, `class: mo dark` for dark ones) and hand-built HTML content. The last HTML comment in a file is that slide's presenter notes.
 - `style.css` — brand tokens and reusable classes: `.kicker`, `.h` (title), `.bullets`/`.bul` (dot bullets, `.bul.red` variant), `.n` (numbered item, number via `data-n`), `.card`, `.quote` (`.quote.green`), `.chip`, `.phone` (phone screenshot: set width via `--pw`, corner radius scales automatically).
 - `public/screens/` — phone-screen PNGs captured from the mobile app's design canvases; `public/logo/` — brand logos copied from the same canvases repo.
+- `global-bottom.vue` — Slidev global layer rendered over every slide: the minimal nav pill (home / prev / "N / total" / next) in the bottom-right corner. Note: in this Slidev version `$renderContext` is `'none'` (not `'slide'`) inside global layers in the normal play view, and the component is gated on `!isPrintMode` from `useNav()` so it never appears in `slidev export` PDFs (CLI export screenshots the page, so `@media print` alone does not hide it).
 - `scripts/capture-screens.mjs` — regenerates `public/screens/` with Playwright. Serve the canvases dir first (`python3 -m http.server 8931` in `../../moeosbb-mobile-app/docs/design/canvases`), then run the script. Edit its `SHOTS` map to add screens.
 
 ## Gotchas
